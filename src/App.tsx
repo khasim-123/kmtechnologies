@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, type RefObject, type MouseEvent } from "react";
+import logoImage from "./assets/logo.png";
 import founderImage from "./assets/khasim_image.png";
 
 type Particle = {
@@ -32,9 +33,9 @@ const GlobalStyles = () => (
     .nav.scrolled{background:rgba(255,255,255,0.98);box-shadow:0 4px 24px rgba(0,0,0,0.08)}
     .nav-inner{width:100%;max-width:none;margin:0;display:flex;align-items:center;justify-content:space-between;height:76px;transition:height .35s}
     .nav.scrolled .nav-inner{height:62px}
-    .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;cursor:pointer}
-    .logo-mark{width:52px;height:52px;flex-shrink:0;filter:drop-shadow(0 4px 14px rgba(26,60,110,0.25));transition:filter .3s,transform .35s cubic-bezier(.34,1.56,.64,1)}
-    .nav-logo:hover .logo-mark{transform:rotate(-6deg) scale(1.08);filter:drop-shadow(0 6px 20px rgba(249,115,22,0.4))}
+    .nav-logo{display:flex;align-items:center;gap:16px;text-decoration:none;cursor:pointer}
+    .logo-mark{width:80px;height:80px;flex-shrink:0;border-radius:32px;overflow:hidden;filter:drop-shadow(0 6px 18px rgba(26,60,110,0.25));transition:all .3s ease}
+    .nav-logo:hover .logo-mark{transform:rotate(-6deg) scale(1.08);filter:drop-shadow(0 8px 24px rgba(249,115,22,0.4))}
     .logo-text-wrap{display:flex;flex-direction:column;gap:1px}
     .logo-name{font-weight:800;font-size:18px;color:var(--primary);letter-spacing:-.4px;line-height:1.1}
     .logo-tag{font-size:10px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
@@ -503,7 +504,7 @@ function Nav() {
       <nav className={`nav${scrolled?" scrolled":""}`}>
         <div className="nav-inner">
           <a className="nav-logo" href="#hero" onClick={(e) => { e.preventDefault(); document.querySelector("#hero")?.scrollIntoView({behavior:"smooth"}); }}>
-            <div className="logo-mark"><KMLogo size={52}/></div>
+            <div className="logo-mark" style={{overflow:"hidden",borderRadius:32}}><img src={logoImage} alt="KM Technologies logo" style={{width:"100%",height:"100%",objectFit:"cover"}}/></div>
             <div className="logo-text-wrap">
               <span className="logo-name">KM Technologies</span>
               <span className="logo-tag">Build · Train · Deliver</span>
