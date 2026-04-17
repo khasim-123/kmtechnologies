@@ -580,7 +580,7 @@ function Hero() {
           <div className="hero-card">
             <div className="hero-card-brand">
               <div style={{width:58,height:58,borderRadius:12,overflow:"hidden",flexShrink:0,boxShadow:"0 4px 14px rgba(0,0,0,0.12)"}}>
-                <img src={founderImage} alt="Khasim Meeravali" style={{width:"100%",height:"100%",objectFit:"cover"}}/>
+                <img src={logoImage} alt="Khasim Meeravali" style={{width:"100%",height:"100%",objectFit:"cover"}}/>
               </div>
               <div>
                 <div className="hcb-name">KM Technologies</div>
@@ -705,7 +705,7 @@ function About() {
         <div className="about-team-row fade-in">
           <div>
             <div style={{borderRadius:24,overflow:"hidden",position:"relative",maxWidth:380,margin:"0 auto",boxShadow:"0 24px 64px rgba(26,60,110,0.18)"}}>
-              <img src={IMGS.founder} alt="Khasim Meeravali" style={{width:"100%",aspectRatio:"4/5",objectFit:"cover",display:"block"}}/>
+              <img src={logoImage} alt="Khasim Meeravali" style={{width:"100%",aspectRatio:"4/5",objectFit:"cover",display:"block"}}/>
               <div style={{position:"absolute",inset:0,background:"linear-gradient(180deg,transparent 55%,rgba(10,22,40,0.85) 100%)"}}/>
               <div style={{position:"absolute",bottom:0,left:0,right:0,padding:"24px 20px"}}>
                 <div style={{color:"rgba(255,255,255,0.7)",fontSize:11,fontWeight:600,letterSpacing:"0.1em",textTransform:"uppercase",marginBottom:4}}>Founder &amp; Lead Developer</div>
